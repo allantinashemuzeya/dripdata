@@ -24,24 +24,9 @@
               "src/assets"
             ],
             "styles": [
-	            "./src/assets/authentication/css/main.css",
-	            "./src/assets/authentication/vendor/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js",
-              "src/assets/authentication/js/main.js",
-              "src/assets/authentication/vendor/jquery/jquery-3.2.1.min.js",
-              "src/assets/authentication/vendor/animsition/js/animsition.min.js",
-              "src/assets/authentication/vendor/bootstrap/js/popper.js",
-              "src/assets/authentication/vendor/bootstrap/js/bootstrap.min.js",
-              "src/assets/authentication/vendor/select2/select2.min.js",
-              "src/assets/authentication/vendor/daterangepicker/moment.min.js",
-              "src/assets/authentication/vendor/daterangepicker/daterangepicker.js",
-              "src/assets/authentication/vendor/countdowntime/countdowntime.js",
-          
-              "./src/assets/style.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -134,10 +119,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "AuthenticationApp",
-  "cli": {
-    "analytics": "7045e451-42da-4d70-b966-3624ad9d156c"
-  }
+    }},
+  "defaultProject": "AuthenticationApp"
 }
