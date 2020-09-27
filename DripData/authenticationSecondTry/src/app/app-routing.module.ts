@@ -10,6 +10,8 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'createAccount', component: CreateAccountComponent},
   {path: 'test', component: TestComponent},
+  { path: '', component: SingInComponent, pathMatch: 'full' }
+
 ];
 
 @NgModule({

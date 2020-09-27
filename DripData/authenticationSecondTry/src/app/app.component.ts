@@ -14,6 +14,11 @@ export class AppComponent implements OnInit{
     
   }
 
+
+  loadLogin(){
+    this.router.navigate(['login'])
+  }
+  
  
 
 }

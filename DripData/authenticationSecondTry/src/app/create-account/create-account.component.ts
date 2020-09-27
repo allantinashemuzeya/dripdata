@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -8,29 +8,34 @@ import { AuthService } from '../auth/auth.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  firstname: any;
-  lastname: any;
+  validationError: String;
   email: any;
   password: any;
-
   constructor(public auth: AuthService) { }
+
+  createAccountError = this.auth.createEmailError
 
   ngOnInit(): void {
   }
 
-  getValues(val){
-
-    console.warn(val)
+  getValues(val) {
 
     this.email = val.email;
     this.password = val.pass;
 
-    console.log(this.email, this.password);
+    if (!val.firstname) {
+      this.validationError = "Please enter your first name";
+    } else if (!val.lastname) {
+      this.validationError = "Please enter your last name";
+    }else if(!val.phone){
+      this.validationError = "Please enter valid phone number"
+    }
+    else {
+      this.auth.createAccount(this.email, this.password);
+    }
 
-    this.auth.createAccount(this.email, this.password);
-    // this.auth.insertData(this.firstname, this.lastname, this.email);
- 
-}
+  
+  }
 
 
 }

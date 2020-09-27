@@ -9,8 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-
-  
+  createEmailError: any;
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFirestore, private router: Router) { }
 
@@ -52,7 +51,8 @@ export class AuthService {
     .catch(
       (e)=>{
         console.log(e);
-        alert(`Error: ${e}`)
+        alert(`${e}`)
+        this.createEmailError = e
       }
     )
   }
